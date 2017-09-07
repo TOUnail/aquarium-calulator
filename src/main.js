@@ -6,10 +6,12 @@ Vue.use(VueRouter)
 
 import Rectangle from './components/Rectangle.vue'
 import Cube from './components/Cube.vue'
+import Hexagon from './components/Hexagon.vue'
 
 const routes = [
 { path: '/', component: Rectangle },
-{ path: '/cube', component: Cube }
+{ path: '/cube', component: Cube },
+{ path: '/hexagon', component: Hexagon }
 ]
 
 const router = new VueRouter({

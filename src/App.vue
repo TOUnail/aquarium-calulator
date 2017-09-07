@@ -2,6 +2,7 @@
   <div id="app">
     <router-link v-bind:to="'/'">Rectangle</router-link>
     <router-link v-bind:to="'/cube'">Cube</router-link>
+    <router-link v-bind:to="'/hexagon'">Hexagon</router-link>
     <router-view></router-view>
   </div>
 </template>
