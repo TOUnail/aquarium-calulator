@@ -13,7 +13,11 @@
       <label>Height</label>
       <input type="text" id="thirdNumber" v-model="thirdNumber">
     </div>
-    <p v-if="result==='0.00'">Please enter a Length, Width &amp; Height.</p>
+    <div class="form">
+      <label>Front Pane</label>
+      <input type="text" id="forthNumber" v-model="forthNumber">
+    </div>
+    <p v-if="result==='0.00'">Please enter a Length, Width, Height &amp; Front Pane.</p>
     <p v-else-if="result==='NaN'">Invalid measurement</p>
     <p v-else>{{ result }} Gallons</p>
     <router-view></router-view>
@@ -27,12 +31,13 @@ export default {
     return {
       firstNumber: '',
       secondNumber: '',
-      thirdNumber: ''
+      thirdNumber: '',
+      forthNumber: ''
     };
   },
   computed: {
     result: function () {
-      return ((this.firstNumber*this.secondNumber*this.thirdNumber)*0.0043290).toFixed(2);
+      return (this.secondNumber*this.firstNumber)-(());
     }
   },
   method: {
@@ -48,7 +53,6 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
 }
 
 h1, h2 {
