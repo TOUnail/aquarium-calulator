@@ -1,6 +1,6 @@
 <template>
-  <div class="hexagon">
-    <img src="https://www.f3images.com/IMD/MD_images/Calculators/Sand_Calculator_Images/Sand_hexagon.jpg">
+  <div class="octagon">
+    <img src="https://www.f3images.com/IMD/MD_images/Calculators/Sand_Calculator_Images/Sand_octagon.jpg">
     <div class="form">
       <label>Length</label>
       <input type="text" id="firstNumber" v-model="firstNumber">
@@ -17,8 +17,11 @@
       <label>Front Pane</label>
       <input type="text" id="forthNumber" v-model="forthNumber">
     </div>
-    <!--p v-if="result==='0.00'">Please enter a Length, Width, Height &amp; Front Pane.</p-->
-    <p v-if="firstNumber===''||secondNumber===''||thirdNumber===''||forthNumber===''">Please enter a Length, Width, Height &amp; Front Pane.</p>
+    <div class="form">
+      <label>End Pane Pane</label>
+      <input type="text" id="fifthNumber" v-model="fifthNumber">
+    </div>
+    <p v-if="firstNumber===''||secondNumber===''||thirdNumber===''||forthNumber===''||fifthNumber===''">Please enter a Length, Width, Height &amp; Front Pane.</p>
     <p v-else-if="result==='NaN'">Invalid measurement</p>
     <p v-else>{{ result }} Gallons</p>
     <router-view></router-view>
@@ -27,25 +30,26 @@
 
 <script>
 export default {
-  name: 'hexagon',
+  name: 'octagon',
   data:  function() {
     return {
       firstNumber: '',
       secondNumber: '',
       thirdNumber: '',
-      forthNumber: ''
+      forthNumber: '',
+      fifthNumber: ''
     };
   },
   computed: {
     result: function () {
-      return ((((this.secondNumber * this.firstNumber) - ((this.secondNumber * (this.firstNumber - this.forthNumber)) / 2)) * this.thirdNumber)*0.0043290).toFixed(2);
+      return (((this.secondNumber * this.firstNumber - (this.firstNumber - this.forthNumber) * (this.secondNumber - this.fifthNumber) / 2) * this.thirdNumber)*0.0043290).toFixed(2);
     }
   }
 };
 </script>
 
 <style>
-#hexagon {
+#octagon {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
