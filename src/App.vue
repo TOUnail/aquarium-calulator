@@ -4,6 +4,9 @@
     <router-link v-bind:to="'/cube'">Cube</router-link>
     <router-link v-bind:to="'/hexagon'">Hexagon</router-link>
     <router-link v-bind:to="'/octagon'">Octagon</router-link>
+    <router-link v-bind:to="'/flatbackhexagon'">Flat Back Hexagon</router-link>
+    <router-link v-bind:to="'/cylinder'">Cylinder</router-link>
+    <router-link v-bind:to="'/halfcylinder'">Half Cylinder</router-link>
     <router-view></router-view>
   </div>
 </template>
