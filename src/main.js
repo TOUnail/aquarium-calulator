@@ -11,6 +11,9 @@ import Octagon from './components/Octagon.vue'
 import FlatBackHexagon from './components/FlatBackHexagon.vue'
 import Cylinder from './components/Cylinder.vue'
 import HalfCylinder from './components/HalfCylinder.vue'
+import CornerCylinder from './components/CornerCylinder.vue'
+import Elliptical from './components/Elliptical.vue'
+import CornerPentagon from './components/CornerPentagon.vue'
 
 const routes = [
 { path: '/', component: Rectangle },
@@ -19,7 +22,10 @@ const routes = [
 { path: '/octagon', component: Octagon },
 { path: '/FlatBackHexagon', component: FlatBackHexagon },
 { path: '/Cylinder', component: Cylinder },
-{ path: '/HalfCylinder', component: HalfCylinder }
+{ path: '/HalfCylinder', component: HalfCylinder },
+{ path: '/CornerCylinder', component: CornerCylinder },
+{ path: '/Elliptical', component: Elliptical },
+{ path: '/CornerPentagon', component: CornerPentagon }
 ]
 
 const router = new VueRouter({

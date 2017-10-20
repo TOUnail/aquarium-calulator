@@ -7,6 +7,9 @@
     <router-link v-bind:to="'/flatbackhexagon'">Flat Back Hexagon</router-link>
     <router-link v-bind:to="'/cylinder'">Cylinder</router-link>
     <router-link v-bind:to="'/halfcylinder'">Half Cylinder</router-link>
+    <router-link v-bind:to="'/cornercylinder'">Corner Cylinder</router-link>
+    <router-link v-bind:to="'/elliptical'">Elliptical</router-link>
+    <router-link v-bind:to="'/cornerpentagon'">Corner Pentagon</router-link>
     <router-view></router-view>
   </div>
 </template>
