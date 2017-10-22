@@ -14,6 +14,7 @@ import HalfCylinder from './components/HalfCylinder.vue'
 import CornerCylinder from './components/CornerCylinder.vue'
 import Elliptical from './components/Elliptical.vue'
 import CornerPentagon from './components/CornerPentagon.vue'
+import LShaped from './components/LShaped.vue'
 
 const routes = [
 { path: '/', component: Rectangle },
@@ -25,7 +26,8 @@ const routes = [
 { path: '/HalfCylinder', component: HalfCylinder },
 { path: '/CornerCylinder', component: CornerCylinder },
 { path: '/Elliptical', component: Elliptical },
-{ path: '/CornerPentagon', component: CornerPentagon }
+{ path: '/CornerPentagon', component: CornerPentagon },
+{ path: '/LShaped', component: LShaped }
 ]
 
 const router = new VueRouter({
