@@ -1,12 +1,12 @@
 <template>
   <div class="cornerpentagon">
-    <img src="https://www.f3images.com/IMD/MD_images/Calculators/Sand_Calculator_Images/Sand_Elipse.jpg">
+    <img src="https://www.f3images.com/IMD/MD_images/Calculators/Sand_Calculator_Images/Sand_Corner_Pentagon.jpg">
     <div class="form">
-      <label>Radius 1</label>
+      <label>Length (short side)</label>
       <input type="text" id="firstNumber" v-model="firstNumber">
     </div>
     <div class="form">
-      <label>Radius 2</label>
+      <label>Length (long side)</label>
       <input type="text" id="secondNumber" v-model="secondNumber">
     </div>
     <div class="form">
@@ -32,7 +32,8 @@ export default {
   },
   computed: {
     result: function () {
-      return ((Math.PI * (this.firstNumber*this.secondNumber*this.thirdNumber))*0.0043290).toFixed(2);
+      return ((0.5*(this.secondNumber*this.secondNumber+2*this.firstNumber*this.secondNumber-this.firstNumber*this.firstNumber)*this.thirdNumber)*0.0043290).toFixed(2);
+      //0.5 * (cornerPentLong * cornerPentLong + 2 * cornerPentShort * cornerPentLong - cornerPentShort * cornerPentShort) * cornerPentHeight
     }
   },
   method: {
