@@ -1,16 +1,81 @@
 <template>
   <div id="app">
-    <router-link v-bind:to="'/'">Rectangle</router-link>
-    <router-link v-bind:to="'/cube'">Cube</router-link>
-    <router-link v-bind:to="'/hexagon'">Hexagon</router-link>
-    <router-link v-bind:to="'/octagon'">Octagon</router-link>
-    <router-link v-bind:to="'/flatbackhexagon'">Flat Back Hexagon</router-link>
-    <router-link v-bind:to="'/cylinder'">Cylinder</router-link>
-    <router-link v-bind:to="'/halfcylinder'">Half Cylinder</router-link>
-    <router-link v-bind:to="'/cornercylinder'">Corner Cylinder</router-link>
-    <router-link v-bind:to="'/elliptical'">Elliptical</router-link>
-    <!--router-link v-bind:to="'/cornerpentagon'">Corner Pentagon</router-link-->
-    <router-link v-bind:to="'/lshaped'">L-Shaped</router-link>
+    <div class="nav-wrapper">
+      <nav class="nav-center">
+        <ul class="hide-on-med-and-down">
+          <li>
+            <router-link v-bind:to="'/'">Rectangle</router-link>
+          </li>
+          <li>
+            <router-link v-bind:to="'/cube'">Cube</router-link>
+          </li>
+          <li>
+            <router-link v-bind:to="'/hexagon'">Hexagon</router-link>
+          </li>
+          <li>
+            <router-link v-bind:to="'/octagon'">Octagon</router-link>
+          </li>
+          <li>
+            <router-link v-bind:to="'/flatbackhexagon'">Flat Back Hexagon</router-link>
+          </li>
+          <li>
+            <router-link v-bind:to="'/cylinder'">Cylinder</router-link>
+          </li>
+          <li>
+            <router-link v-bind:to="'/halfcylinder'">Half Cylinder</router-link>
+          </li>
+          <li>
+            <router-link v-bind:to="'/cornercylinder'">Corner Cylinder</router-link>
+          </li>
+          <li>
+            <router-link v-bind:to="'/elliptical'">Elliptical</router-link>
+          </li>
+          <!--li>
+            <router-link v-bind:to="'/cornerpentagon'">Corner Pentagon</router-link>
+          </li-->
+          <li>
+            <router-link v-bind:to="'/lshaped'">L-Shaped</router-link>
+          </li>
+        </ul>
+        <ul class="side-nav" id="mobile-demo">
+          <li>
+            <router-link v-bind:to="'/'">Rectangle</router-link>
+          </li>
+          <li>
+            <router-link v-bind:to="'/cube'">Cube</router-link>
+          </li>
+          <li>
+            <router-link v-bind:to="'/hexagon'">Hexagon</router-link>
+          </li>
+          <li>
+            <router-link v-bind:to="'/octagon'">Octagon</router-link>
+          </li>
+          <li>
+            <router-link v-bind:to="'/flatbackhexagon'">Flat Back Hexagon</router-link>
+          </li>
+          <li>
+            <router-link v-bind:to="'/cylinder'">Cylinder</router-link>
+          </li>
+          <li>
+            <router-link v-bind:to="'/halfcylinder'">Half Cylinder</router-link>
+          </li>
+          <li>
+            <router-link v-bind:to="'/cornercylinder'">Corner Cylinder</router-link>
+          </li>
+          <li>
+            <router-link v-bind:to="'/elliptical'">Elliptical</router-link>
+          </li>
+          <!--li>
+            <router-link v-bind:to="'/cornerpentagon'">Corner Pentagon</router-link>
+          </li-->
+          <li>
+            <router-link v-bind:to="'/lshaped'">L-Shaped</router-link>
+          </li>
+        </ul>
+        
+        <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+      </nav>
+    </div>
     <router-view></router-view>
   </div>
 </template>
@@ -19,9 +84,12 @@
 export default {
   name: 'app',
 };
+$( document ).ready(function(){
+  $(".button-collapse").sideNav();
+})
 </script>
 
-<style>
+<!--style>
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -48,4 +116,4 @@ li {
 a {
   color: #42b983;
 }
-</style>
+</style-->

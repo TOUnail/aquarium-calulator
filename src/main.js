@@ -1,8 +1,10 @@
 import Vue from 'vue'
 import App from './App.vue'
+import Materials from "vue-materials"
 import VueRouter from 'vue-router'
 
 Vue.use(VueRouter)
+Vue.use(Materials)
 
 import Rectangle from './components/Rectangle.vue'
 import Cube from './components/Cube.vue'

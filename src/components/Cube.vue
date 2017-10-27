@@ -1,13 +1,15 @@
 <template>
-  <div id="cube">
-    <img src="//www.f3images.com/IMD/MD_images/Calculators/Sand_Calculator_Images/Sand_Square.jpg" class="img-responsive center-block" alt="">
-    <div class="form">
-      <label>Length</label>
-      <input type="text" id="firstNumber" v-model="firstNumber">
+  <div id="cube" class="row">
+    <div class="col s12 m8 offset-m2">
+      <img class="responsive-img" src="//www.f3images.com/IMD/MD_images/Calculators/Sand_Calculator_Images/Sand_Square.jpg" alt="">
+      <div class="form">
+        <label>Length</label>
+        <input type="text" id="firstNumber" v-model="firstNumber">
+      </div>
+      <p v-if="result==='0.00'">Please enter a Length.</p>
+      <p v-else-if="result==='NaN'">Invalid Length</p>
+      <p v-else>{{ result }} Gallons</p>
     </div>
-    <p v-if="result==='0.00'">Please enter a Length.</p>
-    <p v-else-if="result==='NaN'">Invalid Length</p>
-    <p v-else>{{ result }} Gallons</p>
   </div>
 </template>
 
@@ -27,7 +29,7 @@ export default {
 };
 </script>
 <!-- styling for the component -->
-<style>
+<!--style>
 #cube {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -35,4 +37,4 @@ export default {
   text-align: center;
   color: #2c3e50;
 }
-</style>
+</style->

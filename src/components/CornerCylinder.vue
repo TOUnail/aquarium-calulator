@@ -1,18 +1,19 @@
 <template>
-  <div class="cornercylinder">
-    <img src="https://www.f3images.com/IMD/MD_images/Calculators/Sand_Calculator_Images/Sand_Corner_Cylinder.jpg">
-    <div class="form">
-      <label>Radius</label>
-      <input type="text" id="firstNumber" v-model="firstNumber">
+  <div id="cornercylinder" class="row">
+    <div class="col s12 m8 offset-m2">
+      <img class="responsive-img" src="https://www.f3images.com/IMD/MD_images/Calculators/Sand_Calculator_Images/Sand_Corner_Cylinder.jpg">
+      <div class="form">
+        <label>Radius</label>
+        <input type="text" id="firstNumber" v-model="firstNumber">
+      </div>
+      <div class="form">
+        <label>Height</label>
+        <input type="text" id="secondNumber" v-model="secondNumber">
+      </div>
+      <p v-if="result==='0.00'">Please enter a Radius &amp; Height.</p>
+      <p v-else-if="result==='NaN'">Invalid measurement</p>
+      <p v-else>{{ result }} Gallons</p>
     </div>
-    <div class="form">
-      <label>Height</label>
-      <input type="text" id="secondNumber" v-model="secondNumber">
-    </div>
-    <p v-if="result==='0.00'">Please enter a Radius &amp; Height.</p>
-    <p v-else-if="result==='NaN'">Invalid measurement</p>
-    <p v-else>{{ result }} Gallons</p>
-    <router-view></router-view>
   </div>
 </template>
 
@@ -36,7 +37,7 @@ export default {
 };
 </script>
 
-<style>
+<!--style>
 #cornercylinder {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -63,4 +64,4 @@ li {
 a {
   color: #42b983;
 }
-</style>
+</style-->

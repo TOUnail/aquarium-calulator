@@ -1,30 +1,31 @@
 <template>
-  <div class="lshaped">
-    <img src="https://www.f3images.com/IMD/MD_images/Calculators/Sand_Calculator_Images/Sand_L_Shape.jpg">
-    <div class="form">
-      <label>Length 1</label>
-      <input type="text" id="firstNumber" v-model="firstNumber">
+  <div id="lshaped" class="row">
+    <div class="col s12 m8 offset-m2">
+      <img class="responsive-img" src="https://www.f3images.com/IMD/MD_images/Calculators/Sand_Calculator_Images/Sand_L_Shape.jpg">
+      <div class="form">
+        <label>Length 1</label>
+        <input type="text" id="firstNumber" v-model="firstNumber">
+      </div>
+      <div class="form">
+        <label>Length 2</label>
+        <input type="text" id="secondNumber" v-model="secondNumber">
+      </div>
+      <div class="form">
+        <label>Width 1</label>
+        <input type="text" id="thirdNumber" v-model="thirdNumber">
+      </div>
+      <div class="form">
+        <label>Width 2</label>
+        <input type="text" id="forthNumber" v-model="forthNumber">
+      </div>
+      <div class="form">
+        <label>Height</label>
+        <input type="text" id="fifthNumber" v-model="fifthNumber">
+      </div>
+      <p v-if="result==='0.00'">Please enter a Radius &amp; Height.</p>
+      <p v-else-if="result==='NaN'">Invalid measurement</p>
+      <p v-else>{{ result }} Gallons</p>
     </div>
-    <div class="form">
-      <label>Length 2</label>
-      <input type="text" id="secondNumber" v-model="secondNumber">
-    </div>
-    <div class="form">
-      <label>Width 1</label>
-      <input type="text" id="thirdNumber" v-model="thirdNumber">
-    </div>
-    <div class="form">
-      <label>Width 2</label>
-      <input type="text" id="forthNumber" v-model="forthNumber">
-    </div>
-    <div class="form">
-      <label>Height</label>
-      <input type="text" id="fifthNumber" v-model="fifthNumber">
-    </div>
-    <p v-if="result==='0.00'">Please enter a Radius &amp; Height.</p>
-    <p v-else-if="result==='NaN'">Invalid measurement</p>
-    <p v-else>{{ result }} Gallons</p>
-    <router-view></router-view>
   </div>
 </template>
 
@@ -51,7 +52,7 @@ export default {
 };
 </script>
 
-<style>
+<!--style>
 #lshaped {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -78,4 +79,4 @@ li {
 a {
   color: #42b983;
 }
-</style>
+</style-->
