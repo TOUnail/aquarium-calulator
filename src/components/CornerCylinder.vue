@@ -1,18 +1,18 @@
 <template>
   <div id="cornercylinder" class="row">
     <div class="col s12 m8 offset-m2">
-      <img class="responsive-img" src="https://www.f3images.com/IMD/MD_images/Calculators/Sand_Calculator_Images/Sand_Corner_Cylinder.jpg">
-      <div class="form">
+      <img class="responsive-img center-block" src="https://www.f3images.com/IMD/MD_images/Calculators/Sand_Calculator_Images/Sand_Corner_Cylinder.jpg">
+      <div class="form input-field">
         <label>Radius</label>
         <input type="text" id="firstNumber" v-model="firstNumber">
       </div>
-      <div class="form">
+      <div class="form input-field">
         <label>Height</label>
         <input type="text" id="secondNumber" v-model="secondNumber">
       </div>
-      <p v-if="result==='0.00'">Please enter a Radius &amp; Height.</p>
-      <p v-else-if="result==='NaN'">Invalid measurement</p>
-      <p v-else>{{ result }} Gallons</p>
+      <p class="center-align" v-if="result==='0.00'">Please enter a Radius &amp; Height.</p>
+      <p class="center-align" v-else-if="result==='NaN'">Invalid measurement</p>
+      <p class="center-align" v-else>{{ result }} Gallons</p>
     </div>
   </div>
 </template>

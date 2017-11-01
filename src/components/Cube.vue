@@ -1,14 +1,14 @@
 <template>
   <div id="cube" class="row">
     <div class="col s12 m8 offset-m2">
-      <img class="responsive-img" src="//www.f3images.com/IMD/MD_images/Calculators/Sand_Calculator_Images/Sand_Square.jpg" alt="">
-      <div class="form">
+      <img class="responsive-img center-block" src="//www.f3images.com/IMD/MD_images/Calculators/Sand_Calculator_Images/Sand_Square.jpg" alt="">
+      <div class="form input-field">
         <label>Length</label>
         <input type="text" id="firstNumber" v-model="firstNumber">
       </div>
-      <p v-if="result==='0.00'">Please enter a Length.</p>
-      <p v-else-if="result==='NaN'">Invalid Length</p>
-      <p v-else>{{ result }} Gallons</p>
+      <p class="center-align" v-if="result==='0.00'">Please enter a Length.</p>
+      <p class="center-align" v-else-if="result==='NaN'">Invalid Length</p>
+      <p class="center-align" v-else>{{ result }} Gallons</p>
     </div>
   </div>
 </template>
